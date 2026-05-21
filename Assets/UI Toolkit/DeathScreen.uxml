@@ -1,0 +1,50 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/DeathScreen.uss" />
+
+    <ui:VisualElement name="root" class="overlay hidden">
+
+        <ui:VisualElement class="backdrop" />
+
+        <ui:VisualElement class="hud-bracket hud-tl" picking-mode="Ignore" />
+        <ui:VisualElement class="hud-bracket hud-tr" picking-mode="Ignore" />
+        <ui:VisualElement class="hud-bracket hud-bl" picking-mode="Ignore" />
+        <ui:VisualElement class="hud-bracket hud-br" picking-mode="Ignore" />
+
+        <ui:VisualElement class="big-panel">
+            <ui:VisualElement class="edge" picking-mode="Ignore" />
+
+            <ui:VisualElement class="bp-header" picking-mode="Ignore">
+                <ui:Label text="// SYSTEM_FAULT  ::  CRITICAL" class="bp-tag" />
+                <ui:Label text="TERMINATED" class="bp-title" />
+                <ui:VisualElement class="bp-divider" picking-mode="Ignore" />
+                <ui:Label text="HOST INSTANCE LOST.  REBOOT?" class="bp-subtitle" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="bp-stats" picking-mode="Ignore">
+                <ui:VisualElement class="stat-row" picking-mode="Ignore">
+                    <ui:Label text="TOTAL DEATHS" class="stat-label" />
+                    <ui:Label name="TotalDeathsValue" text="0" class="stat-value" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="bp-buttons">
+                <ui:Button name="RespawnButton" class="mbtn">
+                    <ui:VisualElement class="mbtn__dot" picking-mode="Ignore" />
+                    <ui:Label text="RESPAWN" class="mbtn__label" />
+                    <ui:Label text="›" class="mbtn__arrow" />
+                </ui:Button>
+                <ui:Button name="RestartButton" class="mbtn">
+                    <ui:VisualElement class="mbtn__dot" picking-mode="Ignore" />
+                    <ui:Label text="RESTART LEVEL" class="mbtn__label" />
+                    <ui:Label text="›" class="mbtn__arrow" />
+                </ui:Button>
+                <ui:Button name="MainMenuButton" class="mbtn">
+                    <ui:VisualElement class="mbtn__dot" picking-mode="Ignore" />
+                    <ui:Label text="MAIN MENU" class="mbtn__label" />
+                    <ui:Label text="›" class="mbtn__arrow" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,29 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/LoadingScreen.uss" />
+
+    <ui:VisualElement name="root" class="loading-overlay" style="display: none;">
+
+        <ui:VisualElement class="backdrop" />
+
+        <ui:VisualElement class="hud-bracket hud-tl" picking-mode="Ignore" />
+        <ui:VisualElement class="hud-bracket hud-tr" picking-mode="Ignore" />
+        <ui:VisualElement class="hud-bracket hud-bl" picking-mode="Ignore" />
+        <ui:VisualElement class="hud-bracket hud-br" picking-mode="Ignore" />
+
+        <ui:VisualElement class="ld-panel" picking-mode="Ignore">
+            <ui:VisualElement class="edge" picking-mode="Ignore" />
+
+            <ui:Label text="// BOOTING INSTANCE" class="ld-tag" />
+            <ui:Label text="LOADING" class="ld-title" />
+            <ui:VisualElement class="ld-divider" picking-mode="Ignore" />
+            <ui:Label name="StatusText" text="INITIALIZING SECTOR" class="ld-subtitle" />
+
+            <ui:VisualElement class="ld-track" picking-mode="Ignore">
+                <ui:VisualElement name="ProgressFill" class="ld-fill" picking-mode="Ignore" />
+            </ui:VisualElement>
+
+            <ui:Label name="ProgressLabel" text="0%" class="ld-pct" />
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

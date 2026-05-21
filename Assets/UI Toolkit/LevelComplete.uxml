@@ -1,0 +1,54 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/LevelComplete.uss" />
+
+    <ui:VisualElement name="root" class="overlay hidden">
+
+        <ui:VisualElement class="backdrop" />
+
+        <ui:VisualElement class="hud-bracket hud-tl" picking-mode="Ignore" />
+        <ui:VisualElement class="hud-bracket hud-tr" picking-mode="Ignore" />
+        <ui:VisualElement class="hud-bracket hud-bl" picking-mode="Ignore" />
+        <ui:VisualElement class="hud-bracket hud-br" picking-mode="Ignore" />
+
+        <ui:VisualElement class="big-panel">
+            <ui:VisualElement class="edge" picking-mode="Ignore" />
+
+            <ui:VisualElement class="bp-header" picking-mode="Ignore">
+                <ui:Label text="// CHECKPOINT_FINAL  ::  CLEARED" class="bp-tag" />
+                <ui:Label text="LEVEL COMPLETE" class="bp-title" />
+                <ui:VisualElement class="bp-divider" picking-mode="Ignore" />
+                <ui:Label text="SECTOR SECURED.  PROCEED." class="bp-subtitle" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="bp-stats" picking-mode="Ignore">
+                <ui:VisualElement class="stat-row" picking-mode="Ignore">
+                    <ui:Label text="DEATHS" class="stat-label" />
+                    <ui:Label name="DeathsValue" text="0" class="stat-value" />
+                </ui:VisualElement>
+                <ui:VisualElement class="stat-row" picking-mode="Ignore">
+                    <ui:Label text="TIME" class="stat-label" />
+                    <ui:Label name="TimeValue" text="00:00" class="stat-value" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="bp-buttons">
+                <ui:Button name="NextLevelButton" class="mbtn">
+                    <ui:VisualElement class="mbtn__dot" picking-mode="Ignore" />
+                    <ui:Label text="NEXT LEVEL" class="mbtn__label" />
+                    <ui:Label text="›" class="mbtn__arrow" />
+                </ui:Button>
+                <ui:Button name="ReplayButton" class="mbtn">
+                    <ui:VisualElement class="mbtn__dot" picking-mode="Ignore" />
+                    <ui:Label text="REPLAY" class="mbtn__label" />
+                    <ui:Label text="›" class="mbtn__arrow" />
+                </ui:Button>
+                <ui:Button name="MainMenuButton" class="mbtn">
+                    <ui:VisualElement class="mbtn__dot" picking-mode="Ignore" />
+                    <ui:Label text="MAIN MENU" class="mbtn__label" />
+                    <ui:Label text="›" class="mbtn__arrow" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

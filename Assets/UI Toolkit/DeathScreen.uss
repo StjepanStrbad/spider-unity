@@ -1,0 +1,215 @@
+/* ============================================================
+   SPIDER — Death overlay (UI Toolkit)
+   Centred sci-fi panel on a darker backdrop. Red accent.
+   ============================================================ */
+
+* {
+    -unity-font-definition: url("project://database/Assets/Fonts/Orbitron-VariableFont_wght.ttf");
+}
+
+.overlay {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+    color: #DCEEF6;
+}
+
+.hidden { display: none; }
+
+.backdrop {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background-color: rgba(8, 2, 4, 0.85);
+}
+
+/* ---------- CORNER BRACKETS ---------- */
+
+.hud-bracket {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-color: rgba(255, 78, 91, 0.55);
+}
+.hud-tl { left: 36px; top: 36px; border-left-width: 2px; border-top-width: 2px; }
+.hud-tr { right: 36px; top: 36px; border-right-width: 2px; border-top-width: 2px; }
+.hud-bl { left: 36px; bottom: 36px; border-left-width: 2px; border-bottom-width: 2px; }
+.hud-br { right: 36px; bottom: 36px; border-right-width: 2px; border-bottom-width: 2px; }
+
+/* ---------- PANEL ---------- */
+
+.big-panel {
+    /* 55% sirine ekrana, bez max-widtha. */
+    width: 55%;
+    min-width: 480px;
+    padding-left: 72px;
+    padding-right: 72px;
+    padding-top: 56px;
+    padding-bottom: 44px;
+    background-color: rgba(20, 8, 10, 0.92);
+    border-width: 1px;
+    border-color: rgba(255, 78, 91, 0.55);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.edge {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    width: 3px;
+    background-color: #FF4E5B;
+}
+
+/* ---------- HEADER ---------- */
+
+.bp-header { flex-direction: column; margin-bottom: 30px; }
+
+.bp-tag {
+    color: #FF4E5B;
+    font-size: 15px;
+    letter-spacing: 5px;
+    -unity-font-style: bold;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.bp-title {
+    color: #FFFFFF;
+    font-size: 60px;
+    letter-spacing: 10px;
+    -unity-font-style: bold;
+    -unity-text-outline-width: 0.3px;
+    -unity-text-outline-color: rgba(255, 78, 91, 0.8);
+    text-shadow: 0 0 12px rgba(255, 78, 91, 0.55);
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.bp-divider {
+    height: 2px;
+    width: 80px;
+    background-color: #FF4E5B;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+.bp-subtitle {
+    color: rgba(255, 168, 175, 0.85);
+    font-size: 14px;
+    letter-spacing: 5px;
+    -unity-font-style: bold;
+    white-space: nowrap;
+}
+
+/* ---------- STATS ---------- */
+
+.bp-stats {
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding-top: 12px;
+    padding-bottom: 6px;
+    border-top-width: 1px;
+    border-top-color: rgba(255, 78, 91, 0.22);
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 78, 91, 0.22);
+}
+
+.stat-row {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.stat-label {
+    flex-grow: 1;
+    color: rgba(220, 238, 246, 0.80);
+    font-size: 16px;
+    letter-spacing: 5px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-left;
+}
+
+.stat-value {
+    color: #FF4E5B;
+    font-size: 24px;
+    letter-spacing: 3px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    min-width: 120px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: rgba(255, 78, 91, 0.06);
+    border-width: 1px;
+    border-color: rgba(255, 78, 91, 0.40);
+    border-radius: 2px;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.bp-buttons { flex-direction: column; }
+
+.mbtn {
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-left: 18px;
+    padding-right: 18px;
+    background-color: rgba(20, 8, 10, 0.5);
+    border-width: 1px;
+    border-color: rgba(255, 78, 91, 0.20);
+    border-radius: 1px;
+    transition-property: background-color, border-color, translate;
+    transition-duration: 160ms;
+    transition-timing-function: ease-out;
+}
+
+.mbtn__dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 78, 91, 0.40);
+    border-radius: 5px;
+    margin-right: 16px;
+    transition-property: background-color, scale;
+    transition-duration: 160ms;
+}
+
+.mbtn__label {
+    flex-grow: 1;
+    color: #C9DEE7;
+    font-size: 19px;
+    letter-spacing: 6px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-left;
+    transition-property: color, translate;
+    transition-duration: 160ms;
+}
+
+.mbtn__arrow {
+    color: #FF4E5B;
+    font-size: 30px;
+    -unity-font-style: bold;
+    opacity: 0;
+    translate: -6px 0;
+    transition-property: opacity, translate;
+    transition-duration: 160ms;
+}
+
+.mbtn:hover {
+    background-color: rgba(255, 78, 91, 0.12);
+    border-color: #FF4E5B;
+    translate: 4px 0;
+}
+.mbtn:hover .mbtn__dot   { background-color: #FF4E5B; scale: 1.4 1.4; }
+.mbtn:hover .mbtn__label { color: #FFFFFF; translate: 2px 0; }
+.mbtn:hover .mbtn__arrow { opacity: 1; translate: 0 0; }
+
+.mbtn:active { background-color: rgba(255, 78, 91, 0.22); }

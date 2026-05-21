@@ -1,0 +1,128 @@
+/* ============================================================
+   SPIDER — Loading overlay (UI Toolkit)
+   Full-screen panel shown during scene transitions. Blocks all
+   input until the new scene is fully loaded.
+   ============================================================ */
+
+* {
+    -unity-font-definition: url("project://database/Assets/Fonts/Orbitron-VariableFont_wght.ttf");
+}
+
+.loading-overlay {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+    color: #DCEEF6;
+}
+
+.hidden { display: none; }
+
+.backdrop {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background-color: rgba(3, 5, 10, 0.96);
+}
+
+.hud-bracket {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-color: rgba(0, 229, 255, 0.55);
+}
+.hud-tl { left: 36px; top: 36px; border-left-width: 2px; border-top-width: 2px; }
+.hud-tr { right: 36px; top: 36px; border-right-width: 2px; border-top-width: 2px; }
+.hud-bl { left: 36px; bottom: 36px; border-left-width: 2px; border-bottom-width: 2px; }
+.hud-br { right: 36px; bottom: 36px; border-right-width: 2px; border-bottom-width: 2px; }
+
+.ld-panel {
+    /* 52% sirine ekrana, bez max-widtha. */
+    width: 52%;
+    min-width: 480px;
+    padding-left: 72px;
+    padding-right: 72px;
+    padding-top: 56px;
+    padding-bottom: 44px;
+    background-color: rgba(8, 14, 24, 0.92);
+    border-width: 1px;
+    border-color: rgba(0, 229, 255, 0.45);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.edge {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    width: 3px;
+    background-color: #00E5FF;
+}
+
+.ld-tag {
+    color: #00E5FF;
+    font-size: 15px;
+    letter-spacing: 5px;
+    -unity-font-style: bold;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.ld-title {
+    color: #FFFFFF;
+    font-size: 60px;
+    letter-spacing: 10px;
+    -unity-font-style: bold;
+    -unity-text-outline-width: 0.3px;
+    -unity-text-outline-color: rgba(0, 229, 255, 0.7);
+    text-shadow: 0 0 12px rgba(0, 229, 255, 0.45);
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.ld-divider {
+    height: 2px;
+    width: 80px;
+    background-color: #00E5FF;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+.ld-subtitle {
+    color: rgba(103, 255, 233, 0.85);
+    font-size: 15px;
+    letter-spacing: 5px;
+    -unity-font-style: bold;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+
+.ld-track {
+    height: 12px;
+    width: 100%;
+    background-color: rgba(0, 229, 255, 0.10);
+    border-width: 1px;
+    border-color: rgba(0, 229, 255, 0.35);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.ld-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #00E5FF;
+    transition-property: width;
+    transition-duration: 120ms;
+    transition-timing-function: ease-out;
+}
+
+.ld-pct {
+    color: #00E5FF;
+    font-size: 18px;
+    letter-spacing: 4px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-right;
+}

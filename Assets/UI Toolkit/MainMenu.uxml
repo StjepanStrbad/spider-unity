@@ -1,0 +1,86 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenu.uss" />
+
+    <!--
+        Three-column flex layout: controls (left) | spider area (middle) | menu (right).
+        The middle column absorbs all window resizing; the side panels keep
+        their natural width and can never overlap.
+    -->
+    <ui:VisualElement name="root" class="root" picking-mode="Ignore">
+
+        <ui:VisualElement class="side-col side-col--left" picking-mode="Ignore">
+            <ui:VisualElement name="controls" class="controls" picking-mode="Ignore">
+                <ui:VisualElement class="edge" picking-mode="Ignore" />
+                <ui:Label text="// INPUT_MAP" class="panel-tag" />
+
+                <ui:VisualElement class="ctrl-row" picking-mode="Ignore">
+                    <ui:VisualElement class="key-group" picking-mode="Ignore">
+                        <ui:Label text="W" class="key key--center" />
+                        <ui:VisualElement class="key-stack" picking-mode="Ignore">
+                            <ui:Label text="A" class="key" />
+                            <ui:Label text="S" class="key" />
+                            <ui:Label text="D" class="key" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:Label text="MOVE" class="ctrl-label" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="ctrl-row" picking-mode="Ignore">
+                    <ui:Label text="MOUSE" class="key key--wide" />
+                    <ui:Label text="ROTATE CAM" class="ctrl-label" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="ctrl-row" picking-mode="Ignore">
+                    <ui:Label text="RMB" class="key key--wide" />
+                    <ui:Label text="FREE CAM" class="ctrl-label" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="ctrl-row" picking-mode="Ignore">
+                    <ui:Label text="SPACE" class="key key--xwide" />
+                    <ui:Label text="JUMP" class="ctrl-label" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="mid-col" picking-mode="Ignore" />
+
+        <ui:VisualElement class="side-col side-col--right" picking-mode="Ignore">
+            <ui:VisualElement name="panel" class="panel">
+                <ui:VisualElement class="edge" picking-mode="Ignore" />
+
+                <ui:VisualElement class="panel-header" picking-mode="Ignore">
+                    <ui:Label text="// MAIN_MENU  ::  v1.0" class="panel-tag" />
+                    <ui:Label text="SPIDER" class="panel-title" />
+                    <ui:VisualElement class="panel-divider" picking-mode="Ignore" />
+                    <ui:Label text="LEGGED TRAVERSAL SYSTEM" class="panel-subtitle" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="buttons">
+                    <ui:Button name="NewGameButton" class="mbtn">
+                        <ui:VisualElement class="mbtn__dot" picking-mode="Ignore" />
+                        <ui:Label text="NEW GAME" class="mbtn__label" />
+                        <ui:Label text="›" class="mbtn__arrow" />
+                    </ui:Button>
+
+                    <ui:Button name="ContinueButton" class="mbtn">
+                        <ui:VisualElement class="mbtn__dot" picking-mode="Ignore" />
+                        <ui:Label text="CONTINUE" class="mbtn__label" />
+                        <ui:Label text="›" class="mbtn__arrow" />
+                    </ui:Button>
+
+                    <ui:Button name="QuitButton" class="mbtn mbtn--danger">
+                        <ui:VisualElement class="mbtn__dot" picking-mode="Ignore" />
+                        <ui:Label text="QUIT" class="mbtn__label" />
+                        <ui:Label text="›" class="mbtn__arrow" />
+                    </ui:Button>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="panel-footer" picking-mode="Ignore">
+                    <ui:VisualElement class="status-dot" picking-mode="Ignore" />
+                    <ui:Label name="StatusText" text="AWAITING INPUT" class="status-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>
