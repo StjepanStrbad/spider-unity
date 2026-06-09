@@ -62,10 +62,10 @@
    ============================================================ */
 
 .panel {
-    /* 52% sirine ekrana - bez max-widtha, raste i na 4K.
-       Paddings u pixelima jer ih PanelSettings.m_ScaleMode automatski
-       skalira sa rezolucijom (referentna rezolucija = 1280x720,
-       sto znaci da na 1080p ekranu sve pixele uvecava ~1.5x). */
+    /* 72% sirine stupca - bez max-widtha, raste i na 4K.
+       Paddings u pixelima jer ih PanelSettings (Scale With Screen Size,
+       ref. rezolucija 1920x1080, match = height) skalira jednako na
+       svakom ekranu - layout uvijek ima 1080 logickih px visine. */
     width: 72%;
     min-width: 500px;
     margin-right:140px;

@@ -86,7 +86,8 @@
     margin-top: 0;
     margin-bottom: 8px;
     padding: 0;
-    white-space: nowrap;
+    /* nowrap maknut - na uskim ekranima se naslov prelama umjesto da klipa */
+    flex-shrink: 1;
 }
 
 .bp-divider {
